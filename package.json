@@ -1,0 +1,9 @@
+{
+  "name": "react-todo-list",
+  "version": "1.0.0",
+  "description": "A kick-ass todo-list made in React!",
+  "main": "index.js",
+  "repository": "git@github.com:DevNebulae/react-todo-list.git",
+  "author": "DevNebulae <gamerkeeperson+github@gmail.com>",
+  "license": "MIT"
+}
