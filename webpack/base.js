@@ -1,6 +1,5 @@
 const path = require("path")
 const webpack = require("webpack")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 const dist = path.resolve(process.cwd(), "dist/")
 const src = path.resolve(process.cwd(), "src/")
@@ -30,13 +29,7 @@ module.exports["config"] = {
     filename: "[name].min.js",
     path: dist
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: "head",
-      template: htmlTemplate
-    }),
-    new webpack.NoEmitOnErrorsPlugin()
-  ],
+  plugins: [new webpack.NoEmitOnErrorsPlugin()],
   resolve: {
     extensions: [".js", ".jsx"]
   }
