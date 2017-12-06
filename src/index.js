@@ -10,9 +10,11 @@ import { createStore } from "redux"
 
 const store = createStore(reducer)
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("react-root")
+document.addEventListener("DOMContentLoaded", () =>
+  render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById("react-root")
+  )
 )
