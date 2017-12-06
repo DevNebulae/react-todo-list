@@ -1,4 +1,4 @@
-const { config } = require("./base")
+const { config, htmlTemplate } = require("./base")
 const merge = require("webpack-merge")
 const webpack = require("webpack")
 
@@ -8,5 +8,7 @@ module.exports = merge(config, {
     port: 3000
   },
   devtool: "#cheap-module-eval-source-map",
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [new webpack.HotModuleReplacementPlugin(), new HtmlWebpackPlugin({
+    template: htmlTemplate
+  }),]
 })
